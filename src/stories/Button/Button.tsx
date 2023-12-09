@@ -2,8 +2,6 @@ import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { VariantProps, cva } from 'class-variance-authority';
 import { cn } from '../../utils/tailwindutil';
-import Icon from '../../common/Icon';
-import Spinner from '../../common/Spinner';
 
 const buttonVariants = cva(
   `inline-flex items-center justify-center rounded-md text-sm 
@@ -42,31 +40,13 @@ const ButtonContent = React.forwardRef<HTMLButtonElement, ButtonProps>(
 ButtonContent.displayName = 'Button';
 
 interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
-  name?: string;
-  leftIcon?: string;
-  rightIcon?: string;
-  iconClassname?: string;
-  withLoader?: boolean;
   className?: string;
-  isLoading?: boolean;
 }
 
-function Button({
-  leftIcon,
-  rightIcon,
-  children,
-  iconClassname,
-  withLoader,
-  isLoading,
-  className,
-  ...rest
-}: IButtonProps) {
+function Button({ children, className, ...rest }: IButtonProps) {
   return (
     <ButtonContent {...rest} className={`flex items-center gap-1 ${className}`}>
-      {leftIcon && <Icon className={`${iconClassname} !text-icon-sm`} name={leftIcon} />}
       {children}
-      {rightIcon && <Icon className={`${iconClassname} !text-icon-sm`} name={rightIcon} />}
-      {withLoader && isLoading && <Spinner className="fill-primary-500" />}
     </ButtonContent>
   );
 }
