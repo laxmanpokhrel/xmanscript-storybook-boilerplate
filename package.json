@@ -5,23 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 6006",
-    "build": "tsc && vite build",
+    "build": "storybook build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
     "prepare": "husky install",
     "commit": "cz",
     "lint:fix": "eslint --fix ."
   },                                                                                           
   "dependencies": {
-    "@fontsource/material-icons": "^5.0.11",
     "class-variance-authority": "^0.7.0",
     "lint-staged": "^15.2.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwind-merge": "^2.1.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwind-merge": "^2.1.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.0.0-alpha.1",
