@@ -4,11 +4,11 @@ interface ISpinnnerProps {
 
 export default function Spinner({ className }: ISpinnnerProps) {
   return (
-    <div role="status" className="naxatw-flex naxatw-items-center">
+    <div role="status" className="flex items-center">
       <svg
         key={className}
         aria-hidden="true"
-        className={`naxatw-h-[18px] naxatw-w-[18px] naxatw-animate-spin ${className}`}
+        className={`h-[18px] w-[18px] animate-spin ${className}`}
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
