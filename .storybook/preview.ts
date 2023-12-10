@@ -1,8 +1,7 @@
-import "tailwindcss/tailwind.css";
-import "@fontsource/material-icons";
+import 'tailwindcss/tailwind.css';
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,

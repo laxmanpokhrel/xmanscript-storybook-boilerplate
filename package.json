@@ -4,13 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "storybook dev -p 6006",
+    "dev": " VITE_CJS_TRACE=true storybook dev -p 6006",
     "build": "storybook build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prepare": "husky install",
     "commit": "cz",
     "lint:fix": "eslint --fix ."
-  },                                                                                           
+  },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
     "lint-staged": "^15.2.0",
@@ -38,6 +38,8 @@
     "eslint-plugin-storybook": "^0.6.15",
     "husky": "^8.0.0",
     "postcss": "^8.4.32",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "storybook": "^8.0.0-alpha.1",
     "tailwindcss": "^3.3.6",
     "typescript": "^5.2.2",
